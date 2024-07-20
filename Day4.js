@@ -2,7 +2,7 @@
 //! Tasks/Activities:
 //todo Activity 1: For Loop
 //*Task 1: Write a program to print numbers from 1 to 10 using a for loop.
-console.log('Counting from 1 to 10: ');
+console.log('numing from 1 to 10: ');
 
 for (let i = 1; i <= 10; i++) {
     console.log(i);
@@ -38,12 +38,11 @@ do {
 //*Task 6: Write a program to calculate the factorial of a number using a do...while loop.
 let num = 5;
 let fact = 1;
-let count=num;
 do {
-    fact *= count;
-    count--;
-} while (count > 0);
-console.log(`Factorial of ${num} is ${fact}`);
+    fact *= num;
+    num--;
+} while (num > 0);
+console.log(`Factorial of 5 is ${fact}`);
 //todo Activity 4: Nested Loops
 //* Task 7: Write a program to print a pattern using nested for loops:
 /*
