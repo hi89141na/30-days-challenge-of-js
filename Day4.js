@@ -2,7 +2,7 @@
 //! Tasks/Activities:
 //todo Activity 1: For Loop
 //*Task 1: Write a program to print numbers from 1 to 10 using a for loop.
-console.log('numing from 1 to 10: ');
+console.log('numbering from 1 to 10: ');
 
 for (let i = 1; i <= 10; i++) {
     console.log(i);
