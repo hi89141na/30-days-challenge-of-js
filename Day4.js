@@ -45,13 +45,6 @@ do {
 console.log(`Factorial of 5 is ${fact}`);
 //todo Activity 4: Nested Loops
 //* Task 7: Write a program to print a pattern using nested for loops:
-/*
-*
-**
-***
-****
-*****
-*/
 console.log('Pattern using nested for loops:');
 for (let i = 1; i <= 5; i++) {
     let line="";
