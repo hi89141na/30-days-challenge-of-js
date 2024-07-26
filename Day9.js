@@ -43,18 +43,3 @@ image.addEventListener("mouseover", () => {
     image.style.border = "5px solid red";
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
