@@ -95,7 +95,7 @@ class linkedList {
     }
     remove(data) {
         if (this.head.data === data) {
-            this.head = head.next;
+            this.head = this.head.next;
         }
 
         let curr = this.head;

@@ -17,20 +17,20 @@ function displayData() {
     let email = localStorage.getItem("email");
     if (name && email) {
         document.getElementById('result').innerHTML =
-        `<h3>Saved Data</h3>
+            `<h3>Saved Data</h3>
             <p>Name: ${name}</p>
             <p>Email: ${email}</p>`;
-        }
+    }
 }
 let form = document.querySelector("#myForm");
-form.addEventListener('submit', function(event){
+form.addEventListener('submit', function (event) {
     event.preventDefault();
     let name = document.querySelector("#name").value;
     let email = document.querySelector("#email").value;
     localStorage.setItem("name", name);
     localStorage.setItem("email", email);
     displayData();
-    
+
 });
 window.onload = displayData;
 //* Task 4: Write a script to remove an item from localStorage. Log the localStorage content before and after removal.
@@ -41,8 +41,8 @@ console.log(`Name: ${localStorage.getItem("name")}
 Email: ${localStorage.getItem("email")}`);
 //todo Activity 3: Understanding SessionStorage
 //* Task 5: Write a script to save a string value to sessionStorage and retrieve it. Log the retrieved value.
-let name="Ali";
-let age=20;
+let name = "Ali";
+let age = 20;
 sessionStorage.setItem("name", name);
 sessionStorage.setItem("age", age);
 console.log(sessionStorage.getItem("name")); // Output: "Ali
@@ -50,7 +50,7 @@ console.log(sessionStorage.getItem("age")); // Output: 20
 //* Task 6: Write a script to save an object to sessionStorage by converting it to a JSON string. Retrieve and parse the object, then log it.
 let myObj = {
     rollno: 44,
-    marks:90
+    marks: 90
 }
 sessionStorage.setItem("myObj", JSON.stringify(myObj));
 let myObjStr = sessionStorage.getItem("myObj");
@@ -62,20 +62,20 @@ function displayData2() {
     let email = sessionStorage.getItem("email");
     if (name && email) {
         document.getElementById('result').innerHTML =
-        `<h3>Saved Data</h3>
+            `<h3>Saved Data</h3>
             <p>Name: ${name}</p>
             <p>Email: ${email}</p>`;
-        }
+    }
 }
 let myForm = document.querySelector("#myForm");
-myForm.addEventListener('submit', function(event){
+myForm.addEventListener('submit', function (event) {
     event.preventDefault();
     let name = document.querySelector("#name").value;
     let email = document.querySelector("#email").value;
     sessionStorage.setItem("name", name);
     sessionStorage.setItem("email", email);
     displayData2();
-    
+
 });
 window.onload = displayData2;
 //* Task 8: Write a script to remove an item from sessionStorage. Log the sessionStorage content before and after removal.
