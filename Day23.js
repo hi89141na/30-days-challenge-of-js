@@ -153,7 +153,6 @@ console.log(trapWater([4, 2, 0, 3, 2, 5]));//Output:  9
 function solveNQueens(n) {
     const results = [];
     const board = Array.from({ length: n }, () => Array(n).fill('.'));
-
     function isValid(row, col) {
         for (let i = 0; i < row; i++) {
             if (board[i][col] === 'Q') return false;
@@ -162,13 +161,11 @@ function solveNQueens(n) {
         }
         return true;
     }
-
     function solve(row) {
         if (row === n) {
             results.push(board.map(row => row.join('')));
             return;
         }
-
         for (let col = 0; col < n; col++) {
             if (isValid(row, col)) {
                 board[row][col] = 'Q';
@@ -177,7 +174,6 @@ function solveNQueens(n) {
             }
         }
     }
-
     solve(0);
     return results;
 }
@@ -193,14 +189,11 @@ console.log(solveNQueens(5));
 function ladderLength(beginWord, endWord, wordList) {
     const wordSet = new Set(wordList);
     if (!wordSet.has(endWord)) return 0;
-
     const queue = [[beginWord, 1]];
-
     while (queue.length) {
         const [word, length] = queue.shift();
 
         if (word === endWord) return length;
-
         for (let i = 0; i < word.length; i++) {
             for (let c = 'a'.charCodeAt(0); c <= 'z'.charCodeAt(0); c++) {
                 const nextWord = word.slice(0, i) + String.fromCharCode(c) + word.slice(i + 1);
@@ -211,10 +204,8 @@ function ladderLength(beginWord, endWord, wordList) {
             }
         }
     }
-
     return 0; // If no transformation sequence is found
 }
-
 // Example usage:
 console.log(ladderLength("hit", "cog", ["hot", "dot", "dog", "lot", "cog"])); // Output should be 5
 console.log(ladderLength("hit", "cog", ["hot","dot","dog","lot","log"])); // Output should be 0
